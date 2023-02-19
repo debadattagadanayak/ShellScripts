@@ -18,6 +18,9 @@ sudo amazon-linux-extras install java-openjdk11 -y
 # Install Jenkins
 sudo yum install jenkins -y
 
+# Enable jenkins too run any command without asking password
+echo 'jenkins ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
+
 # Enable Jenkins service to start at boot
 sudo systemctl enable jenkins
 
@@ -26,3 +29,4 @@ sudo systemctl start jenkins
 
 # Check the status of the Jenkins service
 sudo systemctl status jenkins
+
