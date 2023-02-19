@@ -27,7 +27,7 @@ sudo amazon-linux-extras install java-openjdk11 -y
 sudo wget https://releases.hashicorp.com/terraform/1.0.8/terraform_1.0.8_linux_amd64.zip
 sudo unzip terraform_1.0.8_linux_amd64.zip -d /usr/local/bin/
 sudo rm terraform_1.0.8_linux_amd64.zip
-echo "export PATH=$PATH:/usr/local/bin" >> ~/.bashrc
+sudo echo "export PATH=$PATH:/usr/local/bin" >> ~/.bashrc
 
 # Install Jenkins
 sudo yum install jenkins -y
@@ -43,3 +43,4 @@ echo 'jenkins ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
 
 # Check the status of the Jenkins service
 sudo systemctl status jenkins
+
