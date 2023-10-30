@@ -24,11 +24,8 @@ cd /opt/tomcat/bin/
 chmod +x startup.sh
 chmod +x shutdown.sh
 
-#adduser/local/bin to path
-export PATH=$PATH:/usr/local/bin
-
 #create 2 symbolic link for starting and stutting down tomcat
-ln -s /opt/tomcat/bin/startup.sh /usr/local/bin/tomcatup
-ln -s /opt/tomcat/bin/shutdown.sh /usr/local/bin/tomcatdown
+ln -s /opt/tomcat/bin/startup.sh /usr/bin/tomcatup
+ln -s /opt/tomcat/bin/shutdown.sh /usr/bin/tomcatdown
 
 tomcatup
